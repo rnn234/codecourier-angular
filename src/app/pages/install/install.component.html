@@ -1,0 +1,82 @@
+<div class="min-h-screen bg-black relative overflow-hidden flex items-center justify-center">
+  <!-- Dark Background -->
+  <div class="absolute inset-0 bg-black"></div>
+
+  <!-- Back Button -->
+  <div class="absolute top-6 left-6 z-20">
+    <button 
+      routerLink="/"
+      class="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-all flex items-center gap-2 shadow-lg">
+      <span>←</span>
+      <span>Kembali</span>
+    </button>
+  </div>
+  
+  <!-- Main Content -->
+  <div class="relative z-10 w-full max-w-4xl px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      
+      <!-- Left Side - Buttons -->
+      <div class="space-y-6 animate-slide-up">
+        <h1 class="text-white text-2xl font-semibold mb-8">
+          Klik Kardus ini untuk install CodeCourier
+        </h1>
+        
+        <!-- Button 1 -->
+        <button 
+          (click)="downloadGame()"
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg text-lg">
+          Klik Kardus ini untuk install CodeCourier
+        </button>
+
+        <!-- Button 2 -->
+        <!-- <button 
+          (click)="downloadGame()"
+          class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg text-lg">
+          Klik Kardus ini untuk install CodeCourier
+        </button> -->
+
+        <!-- Additional Info -->
+        <div class="mt-8 pt-8 border-t border-gray-700">
+          <h3 class="text-white font-semibold mb-3">System Requirements:</h3>
+          <ul class="text-gray-400 space-y-2 text-sm">
+            <li>• Windows 10 atau lebih baru</li>
+            <li>• RAM minimal 4GB</li>
+            <li>• Storage: 500MB ruang kosong</li>
+            <li>• DirectX 11 compatible graphics</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Side - Box Image - PLACEHOLDER -->
+      <div class="flex justify-center lg:justify-end animate-float">
+        <!-- TODO: Replace with actual box image -->
+        <img 
+          src="assets/images/box-package.png" 
+          alt="CodeCourier Box" 
+          class="w-64 h-64 lg:w-96 lg:h-96 object-contain"
+          *ngIf="false">
+        
+        <!-- Placeholder Box SVG -->
+        <svg width="320" height="320" viewBox="0 0 200 200">
+          <polygon points="100,40 160,70 100,100 40,70" fill="#d4a574" stroke="#8b6f47" stroke-width="2"/>
+          <polygon points="40,70 40,130 100,160 100,100" fill="#e8b88a" stroke="#8b6f47" stroke-width="2"/>
+          <polygon points="100,100 100,160 160,130 160,70" fill="#c9955f" stroke="#8b6f47" stroke-width="2"/>
+          <rect x="95" y="50" width="10" height="100" fill="#8b7355" opacity="0.6"/>
+          <circle cx="70" cy="100" r="20" fill="#6b5847" opacity="0.4"/>
+          <text x="70" y="108" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">CC</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Help Section -->
+    <div class="mt-12 text-center animate-fade-in" style="animation-delay: 0.6s">
+      <p class="text-gray-400 text-sm">
+        Butuh bantuan? Hubungi kami di 
+        <a href="mailto:support@codecourier.com" class="text-blue-500 hover:underline">
+          support&#64;codecourier.com
+        </a>
+      </p>
+    </div>
+  </div>
+</div>

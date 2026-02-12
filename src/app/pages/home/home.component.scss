@@ -1,0 +1,44 @@
+.pixelated {
+  image-rendering: pixelated;
+  // image-rendering: -moz-crisp-edges; // Firefox support if needed
+  image-rendering: crisp-edges;
+}
+
+// Animasi muncul dari bawah (untuk section karakter)
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.6s ease-out forwards;
+}
+
+
+// --- UPDATE BARU: Animasi Kucing Mengambang ---
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    // Bergerak ke atas sedikit dan rotasi sedikit biar lucu
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+
+.animate-float {
+  // Durasi 3 detik, bergerak terus menerus (infinite)
+  animation: float 3s ease-in-out infinite;
+}
+
+
+// Hapus outline default saat klik
+div:focus, span:focus {
+  outline: none;
+}
