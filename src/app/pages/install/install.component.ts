@@ -11,15 +11,17 @@ import { RouterLink } from '@angular/router';
 })
 export class InstallComponent {
   // Path ke file exe di dalam folder assets
-  downloadLink = 'assets/downloads/Projek-SIJA.exe'; 
+  // downloadLink = 'assets/downloads/Projek-SIJA.exe'; 
+  downloadLink = 'https://drive.google.com/drive/folders/16Vo4SBg6MjF7VBOcKRawUnwz0oFlmPME?usp=sharing';
   
   downloadGame() {
-    // Membuat element link sementara untuk memicu download
-    const link = document.createElement('a');
-    link.href = this.downloadLink;
-    link.download = 'Projek-SIJA.exe'; // Nama file saat terunduh
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.open(this.downloadLink, '_blank');
+    // // Membuat element link sementara untuk memicu download
+    // const link = document.createElement('a');
+    // link.href = this.downloadLink;
+    // link.download = 'Projek-SIJA.exe'; // Nama file saat terunduh
+    // document.body.appendChild(link);
+    // link.click();
+    // document.body.removeChild(link);
   }
 }
